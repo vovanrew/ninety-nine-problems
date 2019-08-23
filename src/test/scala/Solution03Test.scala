@@ -1,11 +1,12 @@
 import org.scalatest.FlatSpec
+import problem3.Solution03
 
-class Problem03Test extends FlatSpec {
+class Solution03Test extends FlatSpec {
 
-  val solution = new Problem03
+  val solution = new Solution03
 
   "Problem03.nthRecursive" should "return nth element of a list" in {
-    val input = List(1,2,3,4,5)
+    val input = List(1, 2, 3, 4, 5)
 
     assertResult(2) {
       solution.nthRecursive(3, input)

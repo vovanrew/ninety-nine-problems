@@ -1,4 +1,6 @@
-class Problem04 {
+package problem4
+
+class Solution04 {
 
   def lengthRecursive[A](list: List[A]): Long =
     if (list.isEmpty) 0
@@ -8,7 +10,8 @@ class Problem04 {
     if (list.isEmpty) acc
     else lengthHelper(acc + 1, list.tail)
 
-
   def lengthCount[A](list: List[A]): Long = list.count(_ => true)
 
+  def lengthFoldLeft[A](list: List[A]): Long =
+    if (list.isEmpty) 0 else list.foldLeft(0)((count, _) => count + 1)
 }

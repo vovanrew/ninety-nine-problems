@@ -1,12 +1,12 @@
 import org.scalatest.FlatSpec
+import problem2.Solution02
 
-class Problem02Test extends FlatSpec{
+class Solution02Test extends FlatSpec {
 
-  val solution = new Problem02
-
+  val solution = new Solution02
 
   "Problem02.penultimateRecursive" should "remove last but one element" in {
-    val list = List(1,2,3,4,5)
+    val list = List(1, 2, 3, 4, 5)
     assertResult(4) {
       solution.penultimateRecursive(list)
     }
@@ -26,9 +26,8 @@ class Problem02Test extends FlatSpec{
     }
   }
 
-
   "Problem02.penultimateOneRecursiveMatch" should "remove last but one element" in {
-    val list = List(1,2,3,4,5)
+    val list = List(1, 2, 3, 4, 5)
     assert(solution.penultimateOneRecursiveMatch(list) == 4)
   }
 
@@ -46,9 +45,8 @@ class Problem02Test extends FlatSpec{
     }
   }
 
-
   "Problem02.penultimateReverse" should "remove last but one element" in {
-    val list = List(1,2,3,4,5)
+    val list = List(1, 2, 3, 4, 5)
     assert(solution.penultimateReverse(list) == 4)
   }
 
